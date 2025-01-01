@@ -1,0 +1,42 @@
+# Ignore WordPress core files
+app/public/wp-admin/
+app/public/wp-includes/
+
+# Ignore wp-config.php - sensitive data
+app/public/wp-config.php
+
+# Ignore wp-content/uploads - user-generated media files
+app/public/wp-content/uploads/
+
+# Ignore wp-content/cache - cache files
+app/public/wp-content/cache/
+
+# Ignore wp-content/backups - backup files
+app/public/wp-content/backups/
+
+# Ignore wp-content/upgrade
+app/public/wp-content/upgrade/
+
+# Ignore node_modules if using Node.js tools
+node_modules/
+
+# Ignore environment variables
+.env
+
+# IDE configuration
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Conf
+conf/
+
+# Database
+app/sql/
