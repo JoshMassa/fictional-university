@@ -3,3 +3,42 @@ Theme Name: Fictional University
 Author: Joshua Massa-Pelletier
 Version: 1.0
 */
+
+:root {
+  --custom-blue: #0d3b66;
+}
+
+/*
+////////////
+Event styles
+////////////
+*/
+
+.events {
+  text-align: center;
+}
+
+.events-link {
+  text-decoration: none;
+}
+
+.events-button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0.75em;
+  background-color: var(--custom-blue);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.event-button-div {
+  display: flex;
+  margin: 0 auto;
+  width: 16%;
+}
+
+.event-summary__year {
+  display: none;
+}

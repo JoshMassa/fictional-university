@@ -18,8 +18,17 @@ get_header(); ?>
             the_post(); ?>
             <div class="event-summary">
                 <a class="event-summary__date t-center" href="#">
-                  <span class="event-summary__month"><?php the_time('M'); ?></span>
-                  <span class="event-summary__day"><?php the_time('d'); ?></span>
+                    <span class="event-summary__month">
+                        <?php
+                        $event_date = new DateTime(get_field('event_date'));
+                        echo $event_date->format('M');
+                        ?>
+                    </span>
+                    <span class="event-summary__day">
+                        <?php
+                        echo $event_date->format('j');
+                        ?>
+                    </span>
                 </a>
                 <div class="event-summary__content">
                   <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
@@ -28,7 +37,11 @@ get_header(); ?>
               </div>
         <?php }
         echo paginate_links();
-    ?>
+        ?>
+
+        <hr class="section-break">
+
+        <p class="events">Looking for a recap of past events? <em><b><a class="events-link" href="<?php echo site_url('/past-events') ?>">Check out our past events archive.</a></b></em></p>
 </div>
 
 <?php get_footer();
